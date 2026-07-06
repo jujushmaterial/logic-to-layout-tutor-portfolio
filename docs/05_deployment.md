@@ -73,7 +73,7 @@ leaderboard_ranked
 
 ## Vercel Serverless API
 
-서버리스 API는 클라이언트가 민감한 key에 직접 접근하지 않도록 중간 계층 역할을 합니다.
+서버리스 API는 클라이언트와 민감한 key 사이의 중간 계층 역할을 합니다.
 
 목표 파일 구조:
 
@@ -112,10 +112,10 @@ Note: 최종 공개 문서에서는 원본 웹앱 저장소의 현재 API 파일
 
 보안 설계 원칙:
 
-- OpenAI API key를 클라이언트 코드에 직접 작성하지 않음
-- Supabase service role key를 GitHub에 직접 포함하지 않음
+- OpenAI API key는 Vercel 환경변수로 관리
+- Supabase service role key는 Vercel 환경변수로 관리
 - Vercel 환경변수에서 서버리스 API가 key를 읽음
-- API key가 없어도 fallback 답변으로 앱이 중단되지 않도록 처리
+- API key 미설정 상황에서도 fallback 답변으로 앱 흐름 유지
 - 참여 코드 기반 회원가입으로 시연/테스트 참여자 통제
 
 ## Deployment Notes
