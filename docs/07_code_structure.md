@@ -2,7 +2,7 @@
 
 ## Purpose of This Document
 
-This document explains the implementation structure of the original Logic-to-Layout AI Tutor web app repository without copying the full source code into this portfolio repository.
+This document summarizes the implementation structure of the original Logic-to-Layout AI Tutor web app repository and points readers to the source repository for full code review.
 
 Original implementation repository:
 
@@ -80,7 +80,7 @@ Representative responsibilities:
 
 Portfolio meaning:
 
-This stage shows how the logic function can be implemented as a gate-level circuit rather than selected as a multiple-choice answer.
+This stage shows users implementing the logic function by placing gates and wiring ports themselves.
 
 ### 3. CMOS Schematic
 
@@ -111,7 +111,7 @@ Representative responsibilities:
 
 Portfolio meaning:
 
-This stage is the core link between CMOS schematic understanding and physical layout intuition. It shows that layout is not just a drawing, but a structure with electrical meaning.
+This stage is the core link between CMOS schematic understanding and physical layout intuition. It presents layout as a structure with electrical meaning.
 
 ## Backend: Vercel Serverless APIs
 
@@ -150,7 +150,7 @@ Examples:
 
 ## Security-related Structure
 
-Sensitive keys are not embedded directly in the frontend.
+Sensitive keys are managed on the serverless/API environment side.
 
 Important environment variables:
 
@@ -164,11 +164,11 @@ SESSION_SECRET
 
 Design intent:
 
-- The browser does not directly access the OpenAI API key.
+- The OpenAI API key stays on the serverless API side.
 - Supabase service role access is handled only through serverless API routes.
 - The app can still provide fallback tutor guidance if the OpenAI API key is unavailable.
 
-## Why the Full Code Is Not Copied Here
+## Where the Source Code Lives
 
 The full implementation code remains in the original web app repository because that repository is responsible for deployment and development.
 
