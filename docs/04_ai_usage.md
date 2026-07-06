@@ -10,7 +10,7 @@
 
 ## ChatGPT as a Development Partner
 
-ChatGPT는 단순 질의응답 도구가 아니라 개발 파트너로 사용했습니다.
+ChatGPT는 개발 파트너로 사용했습니다.
 
 활용 분야:
 
@@ -39,9 +39,9 @@ ChatGPT는 단순 질의응답 도구가 아니라 개발 파트너로 사용했
 - Layout에서 레이어별 지우개를 넣어줘.
 - Contact 하나를 지우면 전기적 추출 검사에서 오류가 나게 해줘.
 - 점수/랭킹 시스템을 서버에 저장되게 해줘.
-- 자유롭게 그리기는 점수에 반영하지 않게 해줘.
+- 자유롭게 그리기는 점수에서 제외해줘.
 - 기록 초기화 시 서버 점수와 최근 도전도 초기화되게 해줘.
-- AI Tutor가 CMOS/Layout에서 작업판을 방해하지 않도록 아래로 내려가게 해줘.
+- AI Tutor가 CMOS/Layout에서 작업판 아래에 배치되게 해줘.
 - 학습 리포트에서 강한 단계와 보완할 단계를 분석해줘.
 - 학습 리포트를 바탕으로 다음 문제를 추천하게 해줘.
 
@@ -67,22 +67,22 @@ ChatGPT는 단순 질의응답 도구가 아니라 개발 파트너로 사용했
 
 ## Security Design
 
-OpenAI API key는 클라이언트 코드에 직접 삽입하지 않았습니다.
+OpenAI API key는 Vercel 환경변수에 저장하고 서버리스 API에서 호출하도록 설계했습니다.
 
 구현 원칙:
 
 - OpenAI API key는 Vercel 환경변수에 저장
-- 클라이언트에서는 직접 key에 접근하지 않음
+- 클라이언트 요청은 서버리스 API를 통해 처리
 - Vercel Serverless API에서만 OpenAI API 호출
-- API key가 없는 환경에서도 앱이 멈추지 않도록 fallback 답변 제공
+- API key 미설정 환경에서도 앱 흐름을 유지하는 fallback 답변 제공
 
-Supabase service role key 역시 GitHub 코드에 직접 포함하지 않고 Vercel 환경변수로 관리했습니다.
+Supabase service role key 역시 Vercel 환경변수로 관리했습니다.
 
 ## Transparency
 
 포트폴리오에서 강조할 점은 다음과 같습니다.
 
-- AI가 만든 코드를 그대로 제출한 것이 아닙니다.
+- AI가 제안한 코드는 사용자가 실행, 화면 검수, 기능 테스트를 거쳐 반영했습니다.
 - 사용자가 실제 실행, 화면 검수, 기능 테스트를 반복했습니다.
 - 전공 개념과 학습적 의미는 사용자가 판단했습니다.
 - AI는 구현 속도를 높이고 대안을 제시하는 협업 도구로 활용했습니다.
