@@ -100,16 +100,16 @@ The original implementation repository is a web deployment repository for the ac
 - [AI Usage](docs/04_ai_usage.md)
 - [Deployment Architecture](docs/05_deployment.md)
 - [Demo Guide](docs/06_demo_guide.md)
-- [Main Portfolio Entry Draft](docs/07_main_portfolio_entry.md)
 
 ## Project Links
 
-| Link | Status |
+| Link | URL |
 |---|---|
 | Main Portfolio | https://jujushmaterial.github.io/ |
-| Portfolio Page | https://jujushmaterial.github.io/logic-to-layout-tutor-portfolio/ |
-| Deployed Web App | To be verified and added |
+| Live Web App | https://logic-to-layout-tutor.vercel.app/ |
+| Demo Video | https://www.youtube.com/watch?v=6UpYdEnMlKQ |
 | Original Implementation Repository | https://github.com/jujushmaterial/logic-to-layout-tutor |
+| Shared AX Repository | https://github.com/minho031207/AX |
 
 ## Key Outcomes
 
