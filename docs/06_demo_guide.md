@@ -1,5 +1,13 @@
 # Demo Guide
 
+## Demo Links
+
+| Item | URL |
+|---|---|
+| Live Web App | https://logic-to-layout-tutor.vercel.app/ |
+| Demo Video | https://www.youtube.com/watch?v=6UpYdEnMlKQ |
+| Shared AX Repository | https://github.com/minho031207/AX |
+
 ## Demo Goal
 
 시연의 핵심은 단순히 버튼을 누르는 것이 아니라, Logic-to-Layout AI Tutor가 다음 흐름을 실제로 연결한다는 점을 보여주는 것입니다.
