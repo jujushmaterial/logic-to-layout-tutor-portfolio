@@ -100,6 +100,7 @@ The original implementation repository is a web deployment repository for the ac
 - [AI Usage](docs/04_ai_usage.md)
 - [Deployment Architecture](docs/05_deployment.md)
 - [Demo Guide](docs/06_demo_guide.md)
+- [Code Structure Overview](docs/07_code_structure.md)
 
 ## Project Links
 
