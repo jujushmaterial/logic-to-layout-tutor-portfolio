@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logic-to-Layout AI Tutor</title>
+  <meta name="description" content="AI-powered interactive learning web app connecting truth tables, gate circuits, CMOS schematics, and layout">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="assets/css/project-v2.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-name" href="https://jujushmaterial.github.io/">Sanghyeon Ju</a>
+      <nav class="site-nav" aria-label="Portfolio navigation">
+        <a href="https://jujushmaterial.github.io/">HOME</a>
+        <a href="https://jujushmaterial.github.io/projects.html">PROJECTS</a>
+        <a href="https://github.com/jujushmaterial/logic-to-layout-tutor-portfolio">GITHUB</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="project-hero__inner">
+        <p class="eyebrow">AI / WEB · DIGITAL LOGIC · CMOS LAYOUT</p>
+        <h1>Logic-to-Layout AI Tutor</h1>
+        <p class="hero-summary">Truth Table에서 Gate Circuit, CMOS Schematic, Layout까지 이어지는 학습 흐름을 하나의 인터랙티브 웹앱으로 구현하고, AI Tutor·점수·랭킹·학습 리포트를 결합한 프로젝트입니다.</p>
+
+        <div class="project-meta" aria-label="Project metadata">
+          <div><span>Period</span><strong>2026.06–2026.07</strong></div>
+          <div><span>Status</span><strong class="status"><i></i>Complete</strong></div>
+          <div><span>Tools</span><strong>HTML · CSS · JavaScript · Vercel · Supabase · OpenAI API</strong></div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button button--dark" href="./study/">프로젝트 상세보기</a>
+          <a class="button button--accent" href="https://logic-to-layout-tutor.vercel.app/" target="_blank" rel="noopener">웹 데모 체험</a>
+          <a class="button" href="https://www.youtube.com/watch?v=6UpYdEnMlKQ" target="_blank" rel="noopener">시연 영상</a>
+          <a class="button" href="./docs/">문서 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-visual" aria-label="Project visual summary">
+      <div class="hero-visual__image">
+        <a href="https://www.youtube.com/watch?v=6UpYdEnMlKQ" target="_blank" rel="noopener" aria-label="Logic-to-Layout demo video">
+          <img src="https://img.youtube.com/vi/6UpYdEnMlKQ/maxresdefault.jpg" alt="Logic-to-Layout AI Tutor demo video thumbnail">
+        </a>
+      </div>
+      <div class="hero-visual__summary">
+        <h2>프로젝트 요약</h2>
+        <dl>
+          <div><dt>개요</dt><dd>디지털 논리식이 CMOS 회로와 Layout으로 이어지는 과정을 직접 조작하며 학습하는 웹 기반 튜터</dd></div>
+          <div><dt>목적</dt><dd>Truth Table·Gate Circuit·CMOS·Layout 사이의 학습 단절을 하나의 연속된 실습 흐름으로 연결</dd></div>
+          <div><dt>결과</dt><dd>직접 조작형 문제풀이, 전기적 연결 검사, AI Tutor, Supabase 기반 점수·랭킹·학습 리포트를 실제 배포 서비스로 구현</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="project-layout">
+      <aside class="toc" aria-label="Page contents">
+        <p>Contents</p>
+        <a href="#problem">Problem</a>
+        <a href="#flow">Learning Flow</a>
+        <a href="#features">Core Features</a>
+        <a href="#layout">Layout Lab</a>
+        <a href="#ai">AI & Report</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#scope">Verification Scope</a>
+        <a href="#resources">Resources</a>
+      </aside>
+
+      <article class="project-article">
+        <section id="problem">
+          <p class="section-label">01 · PROBLEM DEFINITION</p>
+          <h2>논리식과 물리적 Layout 사이의 단절</h2>
+          <p>디지털논리회로에서는 진리표와 게이트 회로를, 반도체 과목에서는 MOSFET·CMOS·Layout을 각각 학습하지만 두 영역이 실제로 어떻게 이어지는지 직접 조작하며 확인할 기회는 제한적입니다.</p>
+          <p>이 프로젝트는 논리식이 CMOS 네트워크와 물리적 레이어로 변환되는 과정을 한 화면 안의 단계형 학습 콘텐츠로 연결하는 데서 시작했습니다.</p>
+          <div class="result-strip">
+            <div><span>Start</span><strong>Truth Table</strong></div>
+            <div><span>Logic</span><strong>Gate Circuit</strong></div>
+            <div><span>Device</span><strong>CMOS Schematic</strong></div>
+            <div><span>Physical</span><strong>Layout Lab</strong></div>
+          </div>
+        </section>
+
+        <section id="flow">
+          <p class="section-label">02 · LEARNING FLOW</p>
+          <h2>Truth Table에서 Layout까지 이어지는 단계형 학습</h2>
+          <ol class="feature-list">
+            <li><strong>Truth Table</strong><br>입력 조합별 출력을 직접 설정하고 논리 동작을 확인합니다.</li>
+            <li><strong>Gate Circuit</strong><br>게이트를 배치하고 입력·출력을 연결해 논리식을 회로로 구현합니다.</li>
+            <li><strong>CMOS Schematic</strong><br>Pull-up/Pull-down Network와 pMOS/nMOS ON/OFF 동작을 시각적으로 확인합니다.</li>
+            <li><strong>Layout Lab</strong><br>N-Well, Active, Poly, Contact, Metal1을 직접 배치하고 전기적 연결을 검사합니다.</li>
+            <li><strong>AI Tutor & Report</strong><br>현재 단계에 맞는 힌트와 오답 분석, 학습 리포트 및 추천 문제를 제공합니다.</li>
+          </ol>
+        </section>
+
+        <section id="features">
+          <p class="section-label">03 · CORE FEATURES</p>
+          <h2>직접 조작과 즉시 피드백 중심의 학습 기능</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area</th><th>Implemented Features</th></tr></thead>
+              <tbody>
+                <tr><td>Problem Solving</td><td>처음 배우기, 직접 연습하기, 도전 문제, 자유롭게 그리기</td></tr>
+                <tr><td>Feedback</td><td>단계별 채점, 오답 피드백, 정답 가이드, 다음 행동 추천</td></tr>
+                <tr><td>Learning Data</td><td>점수, 랭킹, 최근 도전, 완료 문제, 학습 리포트</td></tr>
+                <tr><td>Personalization</td><td>강한 단계·보완 단계 분석과 추천 문제 연결</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">단순한 설명 페이지가 아니라 사용자가 직접 선택·배치·연결하고, 결과를 즉시 확인하는 인터랙티브 학습 구조로 설계했습니다.</p>
+        </section>
+
+        <section id="layout">
+          <p class="section-label">04 · LAYOUT LAB</p>
+          <h2>물리적 레이어와 전기적 연결을 함께 확인</h2>
+          <p>Layout Lab에서는 N-Well, P-Active, N-Active, Poly, Metal1, Contact, 출력 Y를 격자 위에 직접 배치합니다. 레이어별 지우개와 예시 답안, 정답 가이드뿐 아니라 Contact 또는 Metal 연결을 삭제했을 때 전기적 오류를 확인하는 추출 검사도 구현했습니다.</p>
+          <div class="result-strip">
+            <div><span>Layers</span><strong>N-Well · Active</strong></div>
+            <div><span>Gate</span><strong>Poly</strong></div>
+            <div><span>Routing</span><strong>Metal1</strong></div>
+            <div><span>Connection</span><strong>Contact · Y</strong></div>
+          </div>
+        </section>
+
+        <section id="ai">
+          <p class="section-label">05 · AI TUTOR & LEARNING REPORT</p>
+          <h2>현재 문제와 단계에 맞춘 학습 지원</h2>
+          <p>AI Tutor는 현재 문제, 학습 단계, 사용자의 최근 결과를 바탕으로 힌트·오답 분석·다음 행동을 제안합니다. OpenAI API가 연결되지 않은 환경에서도 규칙 기반 fallback 답변을 제공하도록 구성했습니다.</p>
+          <p>Supabase에 저장된 점수와 이벤트를 바탕으로 강한 단계와 보완할 단계를 분석하고, 다음 문제로 바로 이동할 수 있는 학습 리포트를 제공합니다.</p>
+        </section>
+
+        <section id="architecture">
+          <p class="section-label">06 · SERVICE ARCHITECTURE</p>
+          <h2>브라우저 학습 UI와 배포형 서비스 구조</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Layer</th><th>Technology</th><th>Role</th></tr></thead>
+              <tbody>
+                <tr><td>Frontend</td><td>HTML · CSS · JavaScript</td><td>학습 UI, 회로·CMOS·Layout 조작</td></tr>
+                <tr><td>Deployment</td><td>Vercel</td><td>웹 배포와 serverless API</td></tr>
+                <tr><td>Backend / DB</td><td>Supabase</td><td>사용자, 세션, 점수, 랭킹, 자동 저장</td></tr>
+                <tr><td>AI Tutor</td><td>OpenAI API</td><td>현재 단계 기반 힌트와 오답 분석</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="scope">
+          <p class="section-label">07 · VERIFICATION SCOPE</p>
+          <h2>현재 구현 범위와 확장 방향</h2>
+          <p>현재 버전은 교육 목적의 논리·CMOS·Layout 연결 검사와 단계별 학습 피드백을 구현한 웹 서비스입니다. Layout 검사는 교육용 연결 검증에 초점을 두며, 실제 EDA 수준의 DRC/LVS 전체 기능을 대체하지 않습니다.</p>
+          <p>향후에는 더 다양한 논리식과 문제 유형, 좌표 수준 Layout 진단, 관리자 분석 기능 및 모바일 사용성을 확장할 수 있습니다.</p>
+        </section>
+
+        <section id="resources">
+          <p class="section-label">08 · RESOURCES</p>
+          <h2>자료와 서비스</h2>
+          <div class="resource-list">
+            <a href="./study/"><strong>Project Details</strong><span>프로젝트 상세보기</span></a>
+            <a href="./docs/02_features.html"><strong>Features</strong><span>기능 구성</span></a>
+            <a href="./docs/03_development_process.html"><strong>Development Process</strong><span>개발 과정과 문제 해결</span></a>
+            <a href="./docs/04_ai_usage.html"><strong>AI Usage</strong><span>AI 활용 구조</span></a>
+            <a href="./docs/05_deployment.html"><strong>Deployment</strong><span>Vercel·Supabase 배포 구조</span></a>
+            <a href="./docs/06_demo_guide.html"><strong>Demo Guide</strong><span>시연 흐름</span></a>
+            <a href="./docs/07_code_structure.html"><strong>Code Structure</strong><span>구현 구조 개요</span></a>
+            <a href="https://logic-to-layout-tutor.vercel.app/" target="_blank" rel="noopener"><strong>Live Demo</strong><span>배포 웹앱 체험</span></a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://jujushmaterial.github.io/">← Portfolio Home</a>
+    <a href="https://logic-to-layout-tutor.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+    <a href="https://www.youtube.com/watch?v=6UpYdEnMlKQ" target="_blank" rel="noopener">Demo Video</a>
+    <span>Sanghyeon Ju © 2026</span>
+  </footer>
+</body>
+</html>
