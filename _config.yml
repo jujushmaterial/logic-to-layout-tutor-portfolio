@@ -1,2 +1,13 @@
 title: Logic-to-Layout AI Tutor
-description: Portfolio documentation for an AI-powered interactive logic-to-layout learning web app.
+description: AI-powered interactive learning web app connecting truth tables, gate circuits, CMOS schematics, and layout.
+theme: jekyll-theme-cayman
+show_downloads: false
+lang: ko-KR
+exclude:
+  - index.md
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
